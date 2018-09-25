@@ -24,10 +24,13 @@ class FacebookPosts extends Component {
 
   render() {
     const posts = this.state.posts.map((post, index) => {
+      const titleArr = post.title.split(' ');
+      const [expediaTitlePortion, ...remainingTitlePortion] = titleArr;
+      const remainingTitlePortionFormatted = remainingTitlePortion.join(' ');
       return (
         <div className="post-card fb-post" key={index}>
           <img className="expedia-logo" src={expediaLogo} alt="expedia_logo" />
-          <h3>{post.title}</h3>
+          <h3>{expediaTitlePortion} {remainingTitlePortionFormatted}</h3>
           <p>{post.text}</p>
           <small>{post.timestamp}</small>
         </div>
