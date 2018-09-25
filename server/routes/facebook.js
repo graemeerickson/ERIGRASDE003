@@ -1,7 +1,6 @@
 const express = require('express');
 const fs = require('fs');
 const {PythonShell} = require('python-shell');
-// const pythonScript = require('expedia_fb_posts.py');
 const router = express.Router();
 
 const fbPostsFile = './scripts/expedia_fb_posts.txt';
