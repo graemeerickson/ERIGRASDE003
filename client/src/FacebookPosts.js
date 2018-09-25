@@ -30,7 +30,7 @@ class FacebookPosts extends Component {
       return (
         <div className="post-card fb-post" key={index}>
           <img className="expedia-logo" src={expediaLogo} alt="expedia_logo" />
-          <h3>{expediaTitlePortion} {remainingTitlePortionFormatted}</h3>
+          <h3><a href="https://www.facebook.com/expedia/" target="_blank" rel="noopener noreferrer">{expediaTitlePortion}</a> {remainingTitlePortionFormatted}</h3>
           <p>{post.text}</p>
           <small>{post.timestamp}</small>
         </div>
