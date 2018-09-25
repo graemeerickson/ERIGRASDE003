@@ -30,6 +30,9 @@ nav a:hover {
 .active {
   color: rgb(238,194,24);
 }
+.fb-logo {
+  height: 18px;
+}
 .navbar {
   background-color: rgb(0,53,95);
   height: 70px;
@@ -97,5 +100,8 @@ nav a:hover {
   nav a {
     font-size: 14px;
     margin: 0 10px;
+  }
+  .fb-logo {
+    height: 16px;
   }
 }
