@@ -47,6 +47,7 @@ class FacebookPosts extends Component {
       return (
         <main>
           <h2>Fetching Expedia Facebook posts...</h2>
+          <div className="spinner"></div>
         </main>
       )
     }
