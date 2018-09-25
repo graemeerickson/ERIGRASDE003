@@ -25,7 +25,7 @@ class FacebookPosts extends Component {
   render() {
     const posts = this.state.posts.map((post, index) => {
       return (
-        <div key={index}>
+        <div className="post-card fb-post" key={index}>
           <img className="expedia-logo" src={expediaLogo} alt="expedia_logo" />
           <h3>{post.title}</h3>
           <p>{post.text}</p>
