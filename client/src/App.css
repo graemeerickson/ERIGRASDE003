@@ -15,7 +15,37 @@ main {
 }
 
 /* NAV */
-
+nav a {
+  color: rgb(255,255,255);
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 30px;
+  padding: 6px 0;
+  text-decoration: none;
+}
+nav a:hover {
+  border-bottom: 3px solid rgb(238,194,24);
+  color: rgb(238,194,24);
+}
+.active {
+  color: rgb(238,194,24);
+}
+.navbar {
+  background-color: rgb(0,53,95);
+  height: 70px;
+  text-align: center;
+}
+.nav-item {
+  display: inline-block;
+}
+.nav-item .active {
+  border-bottom: 3px solid rgb(238,194,24);
+}
+.nav-list {
+  list-style-type: none;
+  padding: 20px;
+  margin: 0;
+}
 
 /* MAIN SECTION */
 
@@ -61,3 +91,11 @@ main {
 
 /* GOODREADS QUOTES */
 
+
+/* RESPONSIVENESS */
+@media only screen and (max-width: 414px) {
+  nav a {
+    font-size: 14px;
+    margin: 0 10px;
+  }
+}
