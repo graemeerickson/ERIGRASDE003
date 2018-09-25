@@ -1,28 +1,63 @@
+/* GLOBAL */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+main {
+  margin: 20px auto;
+  text-align: center;
+  width: 80%;
+}
 .App {
+  margin: 0 10%;
+}
+
+/* NAV */
+
+
+/* MAIN SECTION */
+
+
+/* HOME */
+.home-call-to-action {
+  display: inline;
+}
+#home-section {
+  margin: 50px auto;
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#pointer-up-container {
+  background: 0 0;
+  border: none;
+  top: 20%;
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+  position: fixed;
+  /*right: 10px;*/
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  width: 40px;
+}
+#pointer-up-image {
+  width: 40px;
+  animation: bounce 0.7s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes bounce {
+  from {
+    transform: translate3d(0,0,0);
+  }
+  to {
+    transform: translate3d(0,-10px,0);
+  }
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+/* FACEBOOK POSTS */
 
-.App-title {
-  font-size: 1.5em;
-}
 
-.App-intro {
-  font-size: large;
-}
+/* GOODREADS QUOTES */
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
