@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import expediaLogo from './img/expedia_logo.jpg';
 
 class FacebookPosts extends Component {
   constructor() {
@@ -22,10 +23,10 @@ class FacebookPosts extends Component {
   }
 
   render() {
-    
     const posts = this.state.posts.map((post, index) => {
       return (
         <div key={index}>
+          <img className="expedia-logo" src={expediaLogo} alt="expedia_logo" />
           <h3>{post.title}</h3>
           <p>{post.text}</p>
           <small>{post.timestamp}</small>
