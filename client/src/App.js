@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import FacebookPosts from './FacebookPosts';
+import Home from './Home';
+import GoodreadsQuotes from './GoodreadsQuotes';
+import Nav from './Nav';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Router>
+          <div>
+            <Nav />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/facebook" component={FacebookPosts} />
+            <Route exact path="/quotes" component={GoodreadsQuotes} />
+          </div>
+        </Router>
       </div>
     );
   }
