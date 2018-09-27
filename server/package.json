@@ -12,8 +12,11 @@
     "cheerio": "^1.0.0-rc.2",
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "fs": "0.0.1-security",
     "node-fetch": "^2.2.0",
+    "passport": "^0.4.0",
+    "passport-goodreads": "^1.0.0",
     "python-shell": "^1.0.4",
     "request": "^2.88.0"
   }
