@@ -15,10 +15,9 @@ passport.use(new GoodreadsStrategy({
     // asynchronous verification
     process.nextTick(function () {
       
-      // To keep the example simple, the user's Goodreads profile is returned to
-      // represent the logged-in user.  In a typical application, you would want
-      // to associate the Goodreads account with a user record in your database,
-      // and return that user instead.
+      // User's Goodreads profile is returned to represent the logged-in user. 
+      // If this app had a database, we would associate the Goodreads account 
+      // with a user record in the db, and return that user instead.
       return done(null, profile);
     });
   }
