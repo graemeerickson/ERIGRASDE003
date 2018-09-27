@@ -56,7 +56,9 @@ class GoodreadsQuotes extends Component {
     if (this.state.loaded && this.state.authorized) {
       return (
         <main>
-          {quotes}
+          <div className="post-cards-container">
+            {quotes}
+          </div>
         </main>
       )
     } else if (this.state.loaded && !this.state.authorized) {
