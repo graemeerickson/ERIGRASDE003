@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+const SERVER_URL = 'http://localhost:3001';
 
 class GoodreadsQuotes extends Component {
   constructor() {
@@ -36,6 +37,9 @@ class GoodreadsQuotes extends Component {
     if (this.state.loaded) {
       return (
         <main>
+          <a href={SERVER_URL + '/auth'}>
+            <button className="login-btn">Log into Goodreads to read<br /> Mark Twain's top quotes</button>
+          </a>
           {quotes}
         </main>
       )
