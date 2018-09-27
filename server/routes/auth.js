@@ -15,7 +15,7 @@ router.get('/', passport.authenticate('goodreads', {
 
 router.get('/callback', passport.authenticate('goodreads', { failureRedirect: FRONTEND_URL + '/quotes' }),
   function(req, res) {
-    res.redirect(FRONTEND_URL + QUOTES+PATH + '/' + req.query.authorize);
+    res.redirect(FRONTEND_URL + QUOTES_PATH + '/' + req.query.authorize);
   }
 );
 
