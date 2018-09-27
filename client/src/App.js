@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import FacebookPosts from './FacebookPosts';
 import GoodreadsQuotes from './GoodreadsQuotes';
 import Home from './Home';
 import Nav from './Nav';
+import PageNotFound from './PageNotFound';
 import './App.css';
 
 class App extends Component {
@@ -13,10 +14,13 @@ class App extends Component {
         <Router>
           <div>
             <Nav />
-            <Route exact path="/" component={Home} />
-            <Route exact path="/facebook" component={FacebookPosts} />
-            <Route exact path="/quotes" component={GoodreadsQuotes} />
-            <Route exact path="/quotes/:id" component={GoodreadsQuotes} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/facebook" component={FacebookPosts} />
+              <Route exact path="/quotes" component={GoodreadsQuotes} />
+              <Route exact path="/quotes/:id" component={GoodreadsQuotes} />
+              <Route component={PageNotFound} />
+            </Switch>
           </div>
         </Router>
       </div>
