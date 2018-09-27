@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import expediaLogo from './img/expedia_logo.jpg';
 
+const SERVER_URL = 'http://localhost:3001';
+const FACEBOOK_POSTS_PATH = '/facebook';
+
 class FacebookPosts extends Component {
   constructor() {
     super();
@@ -11,7 +14,7 @@ class FacebookPosts extends Component {
   }
 
   componentDidMount = () => {
-    fetch('http://localhost:3001/facebook')
+    fetch(SERVER_URL + FACEBOOK_POSTS_PATH)
       .then(response => response.json())
       .then(posts => {
         this.setState({
@@ -19,7 +22,7 @@ class FacebookPosts extends Component {
           posts
         })
       })
-      .catch(err => console.log('Error while parsing:', err))
+      .catch(err => console.log('Error while parsing posts:', err))
   }
 
   render() {
@@ -40,7 +43,9 @@ class FacebookPosts extends Component {
     if (this.state.loaded) {
       return (
         <main>
-          {posts}
+          <div className="post-cards-container">
+            {posts}
+          </div>
         </main>
       )
     } else {
