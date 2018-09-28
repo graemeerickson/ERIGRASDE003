@@ -32,6 +32,7 @@ router.get('/', (req, res) => {
           if(err) { return console.log(err); }
         });
 
+        // resolve promise
         return done(quotes);
       })
       .catch(err => console.log('error fetching from goodreads:', err));
