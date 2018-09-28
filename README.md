@@ -15,7 +15,7 @@ I chose React for the frontend because as a single-page app, it enables a very q
   * React-Router-Dom: BrowserRouter enabled use of frontend routing, including 'Switch' to enable catching any undefined routes to render a '404' component.
 * Middleware:
   * Passport: Enabled authentication integration with Goodreads.
-  * goodreads-passport: Provided Passport strategy for authenticating with Goodreads in Node.js using the OAuth 1.0 API.
+  * goodreads-passport: Provided Passport strategy for authenticating with Goodreads in Node.js using the OAuth 1.0 API, including setting the callback URL upon successful authentication.
   * express-session: Enabled initialization of authentication sessions.
   * CORS: Enabled access from one local port (3000) to another (3001) since the same local machine is hosting both the client and the server.
 * Webscraping:
