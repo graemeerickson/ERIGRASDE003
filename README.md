@@ -20,8 +20,7 @@ I chose React for the frontend because as a single-page app, it enables a very q
   * CORS: Enabled access from one local port (3000) to another (3001) since the same local machine is hosting both the client and the server.
 * Webscraping:
   * Expedia Facebook posts
-    * urlopen (from urllib.request package): Enabled requesting & retrieving the raw HTML from the [Expedia Facebook posts webpage](https://www.facebook.com/pg/expedia/posts/ "Expedia Facebook posts webpage").
-    * BeautifulSoup (from bs4 package): Enabled parsing the retrieved HTML with methods built into BeautifulSoup like *findAll* and *find*. Using this package freed me from manually traversing the DOM and instead focus on simply finding the right "hooks" (via elements and/or class names) to target the relevant information.
+    * python-shell: Enabled execution of Python script responsible for requesting & retrieving the raw HTML from the [Expedia Facebook posts webpage](https://www.facebook.com/pg/expedia/posts/ "Expedia Facebook posts webpage").
   * Goodreads quotes
     * node-fetch: Enabled requesting & retrieving the raw HTML from the [Goodreads Mark Twain quotes webpage](https://www.goodreads.com/author/quotes/1244.Mark_Twain "Goodreads Mark Twain quotes webpage") using the *fetch* statement.
     * Cheerio: Enabled parsing the retrieved HTML with methods built into Cheerio like 'find'. Using this package freed me from manually traversing the DOM and instead focus on simply finding the right "hooks" (via elements and/or class names) to target the relevant information.
@@ -55,6 +54,8 @@ Authentication with the Goodreads OAuth API is only partially implemented. While
 The implemented solution writes a 'True' boolean to the user's LocalStorage once authorized with Goodreads, and each time the Quotes page is visited, the app (a) checks LocalStorage for that boolean or if it doesn't exist, then (b) it checks if the URL path contains a '1' indicating that the user has been authorized. The loophole with this approach is that a savvy user could manually navigate directly to the '/quotes/1' route to access the quotes without authenticating with Goodreads.
 ## How to Test
 Explore the app!
+
+* First make sure you have node and npm installed on your machine and run the command *npm install* within the app directory to install all required packages.
 * Start with the Home page and verify that there is text encouraging the user to click the Facebook posts and Goodreads quotes links in the navbar.
 * Click the 'Expedia on Facebook' nav link and verify that [the 8 most recent Expedia Facebook posts](https://www.facebook.com/pg/expedia/posts/ "the 8 most recent Expedia Facebook posts") are displayed.
 * Click the 'Quotes' nav link and verify that you're first met with a Goodreads login button. Click through and enter valid login credentials. If invalid, Goodreads will re-prompt. If valid, verify that the user is properly redirected back to the Quotes page (via '/quotes/:id') route, and that [the top 10 Mark Twain quotes](https://www.goodreads.com/author/quotes/1244.Mark_Twain "the top 10 Mark Twain quotes") are displayed.
