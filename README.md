@@ -51,29 +51,8 @@ See the [ERIGRASDE001](https://github.com/graemeerickson/ERIGRASDE001 "ERIGRASDE
 |/auth/callback|GET|Reached via Goodreads' OAuth callback. At this point, user is authenticated, so redirect him/her to the frontend '/quotes/:id' route, where ':id' is the authorized code '1'.
 
 ## How to Test
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Explore the app!
+* Start with the Home page and verify that there is text encouraging the user to click the Facebook posts and Goodreads quotes links in the navbar.
+* Click the 'Expedia on Facebook' nav link and verify that [the 8 most recent Expedia Facebook posts](https://www.facebook.com/pg/expedia/posts/ "the 8 most recent Expedia Facebook posts") are displayed.
+* Click the 'Quotes' nav link and verify that you're first met with a Goodreads login button. Click through and enter valid login credentials. If invalid, Goodreads will re-prompt. If valid, verify that the user is properly redirected back to the Quotes page (via '/quotes/:id') route, and that [the top 10 Mark Twain quotes](https://www.goodreads.com/author/quotes/1244.Mark_Twain "the top 10 Mark Twain quotes") are displayed.
+* Try each page on a mobile screen; each page is designed to render responsively regardless of screen size.
