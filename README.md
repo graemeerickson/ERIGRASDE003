@@ -4,12 +4,11 @@ Considering that a non-technical savvy person will be the end-user of the progra
 ## Approach
 ### Tools & Technologies
 #### Languages & Frameworks
-* Backend:
-  * Node.js
-  * Express
-  * Python
-* Frontend:
-  * React.js
+I chose to write my solution using Node.js (Javascript) and the Express framework on the backend, and with React.js on the frontend. Of course, since the script from problem #1 is executed as part of this application, Python is also used to execute that script.
+
+Node.js and Express were sensible backend options because they are lightweight and quick to get up & running, and also because I knew I wanted to use the Passport npm package for integration with the Goodreads OAuth API given my familiarity from using Passport in the past for authentication.
+
+I chose React for the frontend because as a single-page app, it enables a very quick frontend user experience. The user can explore the links in the navbar without the entire page refreshing on him/her since only the area beneath the navbar is re-rendered. I value the positive UX that React enables, and I also wanted to get more practice using it since it is an increasingly common frontend solution in the industry.
 
 #### Tools
 * Middleware:
@@ -30,7 +29,6 @@ Considering that a non-technical savvy person will be the end-user of the progra
     * codecs: The *getwriter* method enabled the stored data to be encoded with utf-8.
   * Goodreads quotes Javascript code
     * fs: Enabled writing to a text file in both the main program and the test script, and enabled checking for and deleting an existing text file in the text script.
-
 
 ### Logic Flow & App Design
 See the [ERIGRASDE001](https://github.com/graemeerickson/ERIGRASDE001 "ERIGRASDE001") readme and the [ERIGRASDE002](https://github.com/graemeerickson/ERIGRASDE002 "ERIGRASDE002") readme for logic flows related to the backend processes of fetching Expedia Facebook posts and Mark Twain quotes from Goodreads.
